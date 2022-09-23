@@ -1,21 +1,33 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
     "module": "commonjs",
-    "declaration": true,
+    "declaration": false,
+    "noImplicitAny": false,
     "removeComments": true,
+    "noLib": false,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "ES2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "baseUrl": "./src",
+    "incremental": false,
+    "strictNullChecks": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "strict": true,
+    "noEmit": false,
+    "strictPropertyInitialization": false,
+  },
+  "include": [
+    "src",
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "src/shared-kernel.d.ts",
+    "src/**/*.json"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
