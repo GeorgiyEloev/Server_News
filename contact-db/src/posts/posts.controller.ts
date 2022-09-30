@@ -9,32 +9,32 @@ import { PaginationDto } from './dto/pagination.dto';
 export class PostsController {
   constructor(private readonly postsService: PostsService) {}
 
-  @MessagePattern('addPosts')
+  @MessagePattern({ cmd: 'addPosts' })
   addPosts(@Payload() posts: AddPosts[]) {
     return this.postsService.addPosts(posts);
   }
 
-  @MessagePattern('createPost')
+  @MessagePattern({ cmd: 'createPost' })
   create(@Payload() createPostDto: CreatePostDto) {
     return this.postsService.create(createPostDto);
   }
 
-  @MessagePattern('findAllPosts')
+  @MessagePattern({ cmd: 'findAllPosts' })
   findAll(@Payload() paginationDto: PaginationDto) {
     return this.postsService.findAll(paginationDto);
   }
 
-  @MessagePattern('findOnePost')
+  @MessagePattern({ cmd: 'findOnePost' })
   findOne(@Payload() id: string) {
     return this.postsService.findOne(id);
   }
 
-  @MessagePattern('updatePost')
+  @MessagePattern({ cmd: 'updatePost' })
   update(@Payload() updatePostDto: UpdatePostDto) {
     return this.postsService.update(updatePostDto.id, updatePostDto);
   }
 
-  @MessagePattern('removePost')
+  @MessagePattern({ cmd: 'removePost' })
   remove(@Payload() id: string) {
     return this.postsService.remove(id);
   }

@@ -29,6 +29,7 @@
     "@nestjs/platform-express": "^8.0.0",
     "amqp-connection-manager": "^4.1.6",
     "amqplib": "^0.10.3",
+    "class-transformer": "^0.5.1",
     "dayjs": "^1.11.4",
     "kafkajs": "^2.1.0",
     "puppeteer": "^16.0.0",
